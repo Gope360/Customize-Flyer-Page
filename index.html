@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Esan @25 Flyer</title>
+  <title>Anglican Communion @25 Celebration!</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" />
   <style>
@@ -33,13 +33,13 @@
     .header-row {
       display: flex;
       align-items: center;
-      justify-content: flex-start;
+      justify-content: center;
       margin-bottom: 0.5rem;
     }
 
     .header-row .top-logo {
       width: 70px;
-      margin-right: 1rem;
+      /* margin-right: 1rem; */
     }
 
     .flyer h1 {
@@ -117,6 +117,104 @@
     .controls button:hover {
       background-color: #005c44;
     }
+
+    @media (max-width: 480px) {
+      .flyer {
+        width: 90vw; /* almost full width on small screens */
+        padding: 1rem;
+      }
+
+      .controls input[type="file"],
+      .controls input[type="text"] {
+        width: 90vw; /* full width for inputs on mobile */
+        max-width: 300px;
+      }
+
+      .header-row {
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .flyer h1 {
+        font-size: 1.2rem;
+      }
+
+      .flyer img {
+        max-width: 150px;
+      }
+
+      .image-placeholder {
+        width: 80vw;
+        height: 80vw;
+        max-width: 250px;
+        max-height: 250px;
+      }
+    }
+    @media (max-width: 768px) {
+      .flyer {
+        width: 90vw; /* almost full width on small screens */
+        padding: 1rem;
+      }
+
+      .controls input[type="file"],
+      .controls input[type="text"] {
+        width: 90vw; /* full width for inputs on mobile */
+        max-width: 300px;
+      }
+
+      .header-row {
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .flyer h1 {
+        font-size: 1.2rem;
+      }
+
+      .flyer img {
+        max-width: 150px;
+      }
+
+      .image-placeholder {
+        width: 80vw;
+        height: 80vw;
+        max-width: 250px;
+        max-height: 250px;
+      }
+    }
+    @media (max-width: 1024px) {
+      .flyer {
+        width: 90vw; /* almost full width on small screens */
+        padding: 1rem;
+      }
+
+      .controls input[type="file"],
+      .controls input[type="text"] {
+        width: 90vw; /* full width for inputs on mobile */
+        max-width: 300px;
+      }
+
+      .header-row {
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .flyer h1 {
+        font-size: 1.2rem;
+      }
+
+      .flyer img {
+        max-width: 150px;
+      }
+
+      .image-placeholder {
+        width: 80vw;
+        height: 80vw;
+        max-width: 250px;
+        max-height: 250px;
+      }
+    }
+
   </style>
 </head>
 <body>
