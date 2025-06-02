@@ -120,8 +120,10 @@
 
     @media (max-width: 480px) {
       .flyer {
-        width: 90vw; /* almost full width on small screens */
+        width: 80vw; /* almost full width on small screens */
         padding: 1rem;
+        margin-left: 5rem;
+        margin-right: 5rem;
       }
 
       .controls input[type="file"],
@@ -135,12 +137,24 @@
         flex-wrap: wrap;
       }
 
+      .header-row .top-logo {
+        width: 50px;
+        margin-bottom: 0.5rem;
+      }
+
+      .flyer h3 {
+        font-size: 1.1rem;
+      }
+
       .flyer h1 {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
+      }
+      .flyer h1 span {
+        font-size: 1rem;
       }
 
       .flyer img {
-        max-width: 150px;
+        max-width: 120px;
       }
 
       .image-placeholder {
@@ -150,70 +164,7 @@
         max-height: 250px;
       }
     }
-    @media (max-width: 768px) {
-      .flyer {
-        width: 90vw; /* almost full width on small screens */
-        padding: 1rem;
-      }
-
-      .controls input[type="file"],
-      .controls input[type="text"] {
-        width: 90vw; /* full width for inputs on mobile */
-        max-width: 300px;
-      }
-
-      .header-row {
-        justify-content: center;
-        flex-wrap: wrap;
-      }
-
-      .flyer h1 {
-        font-size: 1.2rem;
-      }
-
-      .flyer img {
-        max-width: 150px;
-      }
-
-      .image-placeholder {
-        width: 80vw;
-        height: 80vw;
-        max-width: 250px;
-        max-height: 250px;
-      }
-    }
-    @media (max-width: 1024px) {
-      .flyer {
-        width: 90vw; /* almost full width on small screens */
-        padding: 1rem;
-      }
-
-      .controls input[type="file"],
-      .controls input[type="text"] {
-        width: 90vw; /* full width for inputs on mobile */
-        max-width: 300px;
-      }
-
-      .header-row {
-        justify-content: center;
-        flex-wrap: wrap;
-      }
-
-      .flyer h1 {
-        font-size: 1.2rem;
-      }
-
-      .flyer img {
-        max-width: 150px;
-      }
-
-      .image-placeholder {
-        width: 80vw;
-        height: 80vw;
-        max-width: 250px;
-        max-height: 250px;
-      }
-    }
+    
 
   </style>
 </head>
