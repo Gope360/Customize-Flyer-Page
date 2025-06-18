@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Anglican Communion @25 Celebration!</title>
+  <link rel="icon" href="./Church-of-Nigeria.png" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      /* background: green; */
+      background: url('./bg4.jpg') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    .flyer {
+      width: 400px;
+      background: white;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      border-radius: 20px;
+      background-image: url('./bg3.jpg');
+      margin-bottom: 2rem;
+    }
+
+    .header-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 0.5rem;
+    }
+
+    .header-row .top-logo {
+      width: 100px;
+      /* margin-right: 1rem; */
+    }
+
+    .flyer h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      line-height: 1.2;
+      font-weight: 600;
+      text-align: left;
+      margin: 0;
+    }
+
+
+    .flyer h1 span {
+      font-size: 1.2rem;
+    }
+
+    .flyer img {
+      max-width: 200px;
+      margin: 0.5rem 0;
+    }
+
+    .image-placeholder {
+      width: 250px;
+      height: 250px;
+      margin: 1rem auto;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 4px solid #ccc;
+      background-color: #eee;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .flyer h3 {
+      margin: 0.5rem 0;
+      font-size: 1.2rem;
+    }
+
+    .flyer p {
+      font-size: 1rem;
+      margin-top: 0.2rem;
+    }
+
+    .controls {
+      background: #fff;
+      padding: 1rem 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.7rem;
+    }
+
+    .controls input[type="file"],
+    .controls input[type="text"] {
+      font-size: 1rem;
+      padding: 0.5rem 0.8rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      width: 250px;
+    }
+
+    .controls button {
+      padding: 0.5rem 1rem;
+      background-color: #007B5E;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .controls button:hover {
+      background-color: #005c44;
+    }
+
+    @media (max-width: 480px) {
+      .flyer {
+        width: 80vw; /* almost full width on small screens */
+        padding: 1rem;
+        margin-left: 5rem;
+        margin-right: 5rem;
+      }
+
+      .controls input[type="file"],
+      .controls input[type="text"] {
+        width: 90vw; /* full width for inputs on mobile */
+        max-width: 300px;
+      }
+
+      .header-row {
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .header-row .top-logo {
+        width: 50px;
+        margin-bottom: 0.5rem;
+      }
+
+      .flyer h3 {
+        font-size: 1.1rem;
+      }
+
+      .flyer h1 {
+        font-size: 1.1rem;
+      }
+      .flyer h1 span {
+        font-size: 1rem;
+      }
+
+      .flyer img {
+        max-width: 120px;
+      }
+
+      .image-placeholder {
+        width: 250px;
+        height: 250px;
+        margin: 1rem auto;
+        border-radius: 20px;
+        overflow: hidden;
+        border: 4px solid #ccc;
+        background-color: #eee;
+        /* background-size: contain; */
+        background-position: top center;
+        /* background-repeat: no-repeat; */
+      }
+
+    }
+    
+
+  </style>
+</head>
+<body>
+
+  <!-- ✅ Instructional Text Added -->
+  <div style="text-align: center; color: white; margin-bottom: 2rem; max-width: 600px;">
+    <h2 style="font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 0.5rem;">
+      Welcome to Anglican Communion @25 Celebration!
+    </h2>
+    <p style="font-size: 1.1rem; margin: 0.3rem 0;">
+      Celebrate your identity by customizing your personal flyer.
+    </p>
+    <p style="font-size: 1rem;">
+      Use the fields below to upload your photo and enter your name. Then click "Download Flyer" to save your customized flyer.
+    </p>
+  </div>
+  
+
+  <div class="flyer" id="flyerContainer">
+    <div class="header-row">
+      <img src="./logo.png" class="top-logo" alt="Logo" />
+      <h1>DIOCESE OF ESAN,<br><span id="additionalText">ANGLICAN COMMUNION  </span></h1>
+    </div>
+    <img src="./@25.png" alt="" />
+    <div class="image-placeholder" id="photoDisplay"></div>
+    <h3 id="nameDisplay">Dr. Andre Julius Ogungon</h3>
+    <p>I am a proud Anglican</p>
+  </div>
+
+  <div class="controls">
+    <input type="file" id="photoInput" accept="image/*" />
+    <input type="text" id="nameInput" placeholder="Enter your name" />
+    <button id="downloadBtn">Download Flyer</button>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <script>
+    const photoInput = document.getElementById('photoInput');
+    const nameInput = document.getElementById('nameInput');
+    const photoDisplay = document.getElementById('photoDisplay');
+    const nameDisplay = document.getElementById('nameDisplay');
+    const downloadBtn = document.getElementById('downloadBtn');
+
+    photoInput.addEventListener('change', function(event) {
+      const file = event.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          photoDisplay.style.backgroundImage = `url('${e.target.result}')`;
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+
+    nameInput.addEventListener('input', function() {
+      nameDisplay.textContent = nameInput.value || 'GODFREY ELOLEN';
+    });
+
+    downloadBtn.addEventListener('click', function () {
+      const flyer = document.getElementById('flyerContainer');
+      const name = nameInput.value.trim() || 'Flyer';
+
+      const safeName = name.replace(/\s+/g, '-').replace(/[^a-zA-Z0-9\-]/g, '');
+      const fileName = `${safeName}-angcom@25.png`;
+
+      html2canvas(flyer, {
+        useCORS: true,
+        allowTaint: false,
+        backgroundColor: null,
+        scale: 2
+      }).then(canvas => {
+        const link = document.createElement('a');
+        link.download = fileName;
+        link.href = canvas.toDataURL('image/png');
+        link.click();
+      });
+    });
+
+  </script>
+</body>
+</html>
